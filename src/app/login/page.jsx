@@ -49,7 +49,7 @@ const Login = () => {
         <form onSubmit={handleSubmit(sendForm)}>
           <CardBody className="flex flex-col gap-4">
             {/* <Input label="Email" defaultValue={"admin123456@gmail.com"} size="lg" {...register("email", */}
-            <Input label="Email" defaultValue={"homraimlasd@gmail.com"} size="lg" {...register("email",
+            <Input label="Email" defaultValue={"admin123456@gmail.com"} size="lg" {...register("email",
               {
                 required: "email field required",
                 validate: {
