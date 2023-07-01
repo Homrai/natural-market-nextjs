@@ -3,7 +3,7 @@ import {cookies} from "next/headers";
 import ShowOrders from "./components/ShowOrders";
 import { refreshPagina } from "@/consulta api/Login";
 
-export const getTokenServer=async()=>{
+const getTokenServer=async()=>{
   const cookie = cookies();
    let message = "";
    const {value}=cookie.get("refreshToken");

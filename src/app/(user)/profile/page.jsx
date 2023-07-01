@@ -2,7 +2,7 @@ import { refreshPagina } from "@/consulta api/Login";
 import { cookies } from "next/headers";
 import FormUser from "./components/FormUser";
 import { perfil } from "../../../consulta api/User";
-export const getTokenServer=async()=>{
+const getTokenServer=async()=>{
   const cookie = cookies();
    let message = "";
    const {value}=cookie.get("refreshToken");

@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { mostrarPedidosUsuario } from "../../../consulta api/Orders";
 import { refreshPagina } from "@/consulta api/Login";
 //import { Card, CardBody, CardHeader } from "@material-tailwind/react";
-export const getTokenServer=async()=>{
+const getTokenServer=async()=>{
   const cookie = cookies();
    let message = "";
    const {value}=cookie.get("refreshToken");

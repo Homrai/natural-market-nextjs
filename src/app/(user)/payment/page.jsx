@@ -3,7 +3,7 @@ import FormPayment from "./components/FormPayment";
 import { refreshPagina } from "@/consulta api/Login";
 import { perfil } from "@/consulta api/User";
 
-export const getTokenServer=async()=>{
+const getTokenServer=async()=>{
   const cookie = cookies();
    let message = "";
    const {value}=cookie.get("refreshToken");
