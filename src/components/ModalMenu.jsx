@@ -55,24 +55,24 @@ import { ToastContainer, toast } from "react-toastify";
     }
     return (
         <>
-          <DialogHeader className="bg-amber-400">
-                  <h1 className="text-center text-2xl md:text-6 xl mx-auto text-light-green-900 capitalize">
+          <DialogHeader className="bg-white  rounded-t-xl">
+                  <h1 className="text-center shadow-black text-shadow-lg text-2xl md:text-5xl mx-auto text-orange-700 capitalize">
                     {nombre}
                   </h1>
           </DialogHeader>
-          <DialogBody divider={true} className="p-0  bg-black">
+          <DialogBody divider={true} className="p-0 marco-profile bg-white bg-opacity-50">
             <Carousel transition={{type: "tween", duration: 0.5 }} className="rounded-xl w-1/2 mx-auto">
                 {imagenes.map((item,index)=>(
                     <img
                         key={"imgSlide"+index}
                         src={item}
                         alt={`slide ${index+1}`}
-                        className="h-auto"
+                        className="h-auto rounded-xl"
                     />
                 ))}
             </Carousel>
           </DialogBody>
-          <DialogFooter className="bg-light-green-100">
+          <DialogFooter className="bg-green-800 rounded-b-xl">
             {cantidad===0?
             <>
             <h1 className="text-red-900">sold out</h1>
