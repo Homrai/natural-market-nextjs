@@ -2,26 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  background: radial-gradient(rgb(103, 88, 65),rgb(119, 75, 21),rgb(66, 40, 2));
+  text-shadow: 1px 2px 2px rgb(114, 112, 112);
+}
+.marco-head{
+  background-image: url("../img/marco.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.marco-profile{
+  background-image: url("../img/profile.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

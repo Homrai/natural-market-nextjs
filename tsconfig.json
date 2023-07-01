@@ -23,6 +23,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/HeadLogo.tsx",
+    "src/components/CarouselInicio.jsx",
+    "src/app/menu/page.jsx"
+, "src/components/MenuCard.jsx", "src/components/Navbar.jsx", "src/app/layout.tsx"  ],
   "exclude": ["node_modules"]
 }
