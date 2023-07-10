@@ -49,7 +49,7 @@ const Login = () => {
         <form onSubmit={handleSubmit(sendForm)}>
           <CardBody className="flex flex-col gap-4">
             {/* <Input label="Email" defaultValue={"admin123456@gmail.com"} size="lg" {...register("email", */}
-            <Input label="Email" defaultValue={"admin123456@gmail.com"} size="lg" {...register("email",
+            <Input label="Email" defaultValue={""} size="lg" {...register("email",
               {
                 required: "email field required",
                 validate: {
@@ -58,7 +58,9 @@ const Login = () => {
                 }
               })} />
             {errors.email && <span className="text-red-900">{errors?.email?.message}</span>}
-            <Input label="Password" icon={<i onClick={()=>setSeePass(!seePass)} className={`bi ${seePass?"text-red-900 bi-eye-slash-fill":"bi-eye-fill text-blue-900 "} text-2xl rounded-xl`} />} type={seePass?"text":"password"} size="lg" defaultValue={"asdASD1*"} {...register("password", { required: "password field required", minLength: { value: 5, message: "5 characters min" } })} />
+            <Input label="Password" icon={<i onClick={()=>setSeePass(!seePass)} className={`bi ${seePass?"text-red-900 bi-eye-slash-fill":"bi-eye-fill text-blue-900 "} text-2xl rounded-xl`} />} 
+            type={seePass?"text":"password"} size="lg" 
+            defaultValue={""} {...register("password", { required: "password field required", minLength: { value: 5, message: "5 characters min" } })} />
             {errors.password && <span className="text-red-900">{errors?.password?.message}</span>}
 
           </CardBody>

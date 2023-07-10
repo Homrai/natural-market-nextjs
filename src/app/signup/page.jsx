@@ -16,12 +16,12 @@ const page = () => {
 
 useEffect(()=>{
     reset({
-        email:"asd@.",
-        nombre:"asdasdasdasd",
-        password:"asdasdasd1*",
-        repassword:"asdasdasd1*",
-        telefono:123123123123,
-        direccion:"asdasdasdasd"
+        email:"",
+        nombre:"",
+        password:"*",
+        repassword:"",
+        telefono:0,
+        direccion:""
       })
 },[])
 
