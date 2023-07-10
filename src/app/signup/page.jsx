@@ -8,22 +8,11 @@ import { enviarDatosRegistro } from '@/consulta api/Login';
 
 
 const page = () => {
-  const { register, handleSubmit,watch,reset, formState: { errors } } = useForm();
+  const { register, handleSubmit,watch, formState: { errors } } = useForm();
   const script = /[<">/']/;
   const router=useRouter();
   const [loading,setLoading]=useState(false);
   const [seePass,setSeePass]=useState(false);
-
-useEffect(()=>{
-    reset({
-        email:"",
-        nombre:"",
-        password:"*",
-        repassword:"",
-        telefono:0,
-        direccion:""
-      })
-},[])
 
   const addUser=async(data)=>{
      setLoading(true);
