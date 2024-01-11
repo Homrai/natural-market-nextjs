@@ -29,7 +29,7 @@ export const productoId=async(id)=>{
 
 export const editarProductos= async (token,registroDatos)=>{
   try {
-      const datos = await fetch(url+"edit", {
+      const datos = await fetch(url+"/edit", {
           method: `PUT`,
           headers: {
               'Authorization': `Bearer ${token}`,
