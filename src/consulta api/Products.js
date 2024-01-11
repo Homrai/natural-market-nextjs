@@ -1,6 +1,7 @@
+const url = "https://natural-market-homrai.vercel.app/product";
 export const getData=async()=>{
     try {
-          const datos = await fetch("https://natural-market.onrender.com/product",{
+          const datos = await fetch(url,{
             next:{revalidate:120},
           });
           if (datos.ok) {
@@ -28,7 +29,7 @@ export const productoId=async(id)=>{
 
 export const editarProductos= async (token,registroDatos)=>{
   try {
-      const datos = await fetch("https://natural-market.onrender.com/product/"+"edit", {
+      const datos = await fetch(url+"edit", {
           method: `PUT`,
           headers: {
               'Authorization': `Bearer ${token}`,
@@ -52,7 +53,7 @@ export const editarProductos= async (token,registroDatos)=>{
 
 export const borrarProductos= async (token, id)=>{
   try {
-      const datos = await fetch("https://natural-market.onrender.com/product/"+`borrar/${id}`, {
+      const datos = await fetch(url+`/borrar/${id}`, {
           method: `DELETE`,
           headers: {
               'Authorization': `Bearer ${token}`,
@@ -74,7 +75,7 @@ export const borrarProductos= async (token, id)=>{
 
 export const agregarProductos= async (token, registroDatos)=>{
   try {
-      const datos = await fetch("https://natural-market.onrender.com/product/add", {
+      const datos = await fetch(url+"/add", {
           method: `POST`,
           headers: {
               'Authorization': `Bearer ${token}`,
